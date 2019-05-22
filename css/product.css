@@ -1,0 +1,522 @@
+body, div, object, iframe, h1, h2, h3, h4, h5, h6, a,
+p, pre, del, em, dl, dt, dd, form, ul, ol, li, img
+label, table, caption, tr, th, td {
+    margin: 0px;
+    padding: 0px;
+    font-family: 宋体;
+    /*sans-serif表示在浏览器不支持改字体的情况下，自动选择类似字体。*/
+    list-style: none;
+}
+body{
+    background: #e9eaed;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+}
+/*header 博客主题设置*/
+.header{
+    width: 100%;
+    height: 60px;
+    background: #000;
+}
+.headerBox{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 60px;
+}
+.headerBox h1{
+    height: 100%;
+    margin:0 75px 0 0;
+    float: left;
+}
+/*网站导航列表*/
+ul.nav{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.nav{
+    height: 100%;
+    float: left;
+}
+.nav li{
+    float: left;
+    margin-right: 20px;
+}
+/*a标签鼠标放置变色*/
+.nav a:hover{
+    color: #00c1de;
+}
+div .search{
+    height: 100%;
+    float: right;
+}
+/*头部搜索框*/
+.search img{
+    height: auto;
+    margin: 18px auto;
+    padding: 0;
+}
+/*main块*/
+.main{
+    width: 1200px;
+    height: auto;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+/*main左块*/
+.mainLeft{
+    width: 902px;
+    height: auto;
+    min-height: 300px;
+    float: left;
+}
+.mainLeft .figure{
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.figure img{
+    width: 132px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+.figure h2{
+    margin-bottom: 15px;
+}
+.latestBlog{
+    width: 862px;
+    padding: 20px;
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.latestBlog .blogTextAll{
+    width: 862px;
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px dashed #eeeeee;
+}
+.blogTextBranch{
+    width: 862px;
+    overflow: hidden;
+}
+.branchTitle{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.branchTitle .branchTitleL{
+    float: left;
+    color: #ff0000;
+    font-size: 18px;
+}
+.branchTitle .branchTitleR{
+    display: block;
+    float: left;
+    color: #333333;
+    font-size: 18px;
+}
+.branchTitleR:hover{
+    color: #00c1de;
+}
+.branchContent{
+    overflow: hidden;
+}
+.branchContentL{
+    width: 200px;
+    height: 105px;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.branchContentL > p{
+    background: #39bbda;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.branchContentL:hover img{
+    transform: scale(1.1,1.1);
+    transition: all .5s linear;
+}
+.branchContentR{
+    width: 642px;
+    margin-left: 20px;
+    float: right;
+}
+.blogarticles{
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;        /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索子元素的排列方式*/
+    -webkit-line-clamp: 2;      /*用来限制多行文本显示行数*/
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+.trivial{
+    height: 36px;
+    overflow: hidden;
+}
+.aboutMe{
+    display: block;
+    width: 36px;
+    height: 36px;
+    float: left;
+}
+.aboutMe img{
+    border-radius: 50%;
+}
+.trivial .date{
+    margin-left: 10px;
+    line-height: 36px;
+    float: left;
+}
+.trivial .experience{
+    color:#99a5c2;
+    margin-left: 10px;
+    line-height: 36px;
+    float: left;
+}
+.experience a{
+    color: #009966;
+}
+.more{
+    display: block;
+    padding: 10px;
+    background: #12b7de;
+    float: right;
+    border-radius: 5px;
+}
+.more p{
+    color: #000;
+    line-height: 16px;
+}
+/*main右块*/
+.mainRight{
+    width: 284px;
+    height: auto;
+    border-radius: 5px;
+    float: right;
+}
+.mainRight a:hover img{
+    transition: all .5s linear;
+    transform: scale(1.1,1.1);
+}
+.mainRight .clickrank{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.retitle{
+    height: 39px;
+    line-height: 39px;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #e9eaed;
+    position: relative;
+}
+.retitle:before{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #333333;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.retitle:hover::before{
+    width: 75px;
+    transition: width .5s linear;
+}
+.clickrank .bequiet{
+    display: block;
+    width: 244px;
+    height: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+.bequiet center{
+    color: #ffffff;
+    width: 152px;
+    height: 38px;
+    position: absolute;
+    left: 46px;
+    top: 32px;
+}
+.clickranktList li::before{
+    content: '1';
+    width: 16px;
+    height: 16px;
+    color: #ffffff;
+    background: #ff6600;
+    font-size: 10px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+.clickranktList li:nth-child(2)::before{
+    content: '2';
+    background: #ff6600;
+}
+.clickranktList li:nth-child(3)::before{
+    content: '3';
+    background: #ff6600;
+}
+.clickranktList li{
+    height: 30px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    line-height: 30px;
+}
+.clickranktList a{
+    width: 218px;
+    float: right;
+    margin-left: 10px;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mainRight .statRecommed{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.statRecommed .principle{
+    display: block;
+    width: 244px;
+    height: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+.principle center{
+    color: #ffffff;
+    width: 152px;
+    height: 38px;
+    /*line-height: 1.5;*/
+    display: -webkit-box;        /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索子元素的排列方式*/
+    -webkit-line-clamp: 2;      /*用来限制多行文本显示行数*/
+    overflow: hidden;
+    position: absolute;
+    left: 46px;
+    top: 32px;
+}
+.statRecommedtList{
+    overflow: hidden;
+}
+.statRecommedtList li{
+    width: 244px;
+    height: 60px;
+    margin-top: 10px;
+    display: block;
+}
+.statRecommedtList a{
+    display: block;
+    color: #333333;
+    width: 244px;
+}
+.statRecommedtList img{
+    width: 70px;
+    height: 60px;
+    float: left;
+}
+.statRecommedtList li div{
+    width: 154px;
+    height: 40px;
+    margin-left: 10px;
+    float: left;
+    margin: 10px 10px;
+    display: -webkit-box;        /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索子元素的排列方式*/
+    -webkit-line-clamp: 2;      /*用来限制多行文本显示行数*/
+    overflow: hidden;
+}
+.mainRight .MRimg{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.MRimg a{
+    display: block;
+    width: 244px;
+    height: 174px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.MRimg:hover img{
+    transform: scale(1.1,1.1);
+    transition: all .5s linear;
+}
+.mainRight .tagCloud{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.tagCloud ul{
+    overflow: hidden;
+}
+.tagCloud a{
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    padding: 5px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    float: left;
+    background: #e9eaed;
+}
+.tagCloud ul a:nth-child(5n){
+    background: rgba(210, 219, 0, 0.75);
+}
+.tagCloud ul a:nth-child(5n-1){
+    background: rgba(0, 203, 21, 0.75);
+}
+.tagCloud ul a:nth-child(5n-2){
+    background: rgba(0, 121, 219, 0.75);
+}
+.tagCloud ul a:nth-child(5n-3){
+    background: rgba(219, 0, 215, 0.75);
+}
+.tagCloud ul a:nth-child(5n-4){
+    background: rgba(219, 86, 0, 0.75);
+}
+.mainRight .gLike{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.gLike .gLikelist{
+    margin-top: 20px;
+}
+.gLike .gLikelist li{
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.gLikelist a{
+    display: block;
+    color: #333333;
+    float: left;
+    margin-left: 10px;
+}
+.gLikelist li::before{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #333333;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.mainRight .statInformation{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.statInformationList{
+    margin-top: 20px;
+}
+.statInformationList li{
+    margin-top: 10px;
+}
+.statInformationList li a{
+    color: #009966;
+}
+.statInformationList li a:hover{
+    color: #00c1de;
+}
+.mainRight .fLink{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.fLink a{
+    color: #333333;
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.tail{
+    width: 100%;
+    padding: 30px 0;
+    background: #333333;
+}
+.tailMain{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.tailMain .tailMainL{
+    width: 221px;
+    margin-right: 40px;
+    overflow: hidden;
+    float: left;
+}
+.tailMain > .tailMainL > img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    float: left;
+}
+.tailMain > .tailMainL > .tailMainl1{
+    height: 21px;
+    font-size: 14px;
+    float: left;
+    margin: 10px 29px 0;
+}
+.tailMain > .tailMainL > .tailMainl2{
+    height: 21px;
+    font-size: 14px;
+    float: left;
+    margin: 10px 0 0 38px;
+}
+.tailMainR{
+    padding: 10px 0;
+    float: left;
+}
+.tailMainR b{
+    color: #12b7de;
+}
+.tailMainR > ul > li{
+    margin-top: 10px;
+}
+.retop{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    background: #333333;
+}
