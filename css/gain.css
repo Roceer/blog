@@ -470,40 +470,41 @@ div .search{
     width: 100%;
     padding: 30px 0;
     background: #333333;
+    border-top: 10px solid #4ebbfe;
 }
 .tailMain{
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 }
 .tailMain .tailMainL{
-    width: 221px;
-    margin-right: 40px;
-    overflow: hidden;
+    width: 240px;
+    padding: 0 10px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.tailMain > .tailMainL > p{
+    width: 100px;
+    margin-right: 20px;
     float: left;
 }
-.tailMain > .tailMainL > img{
-    display: block;
+.tailMain > .tailMainL > p > img{
     width: 100px;
     height: 100px;
-    border-radius: 5px;
-    float: left;
+    border-radius: 0;
 }
-.tailMain > .tailMainL > .tailMainl1{
-    height: 21px;
+.tailMain > .tailMainL > p > span{
+    display: block;
+    width: 100px;
     font-size: 14px;
-    float: left;
-    margin: 10px 29px 0;
-}
-.tailMain > .tailMainL > .tailMainl2{
-    height: 21px;
-    font-size: 14px;
-    float: left;
-    margin: 10px 0 0 38px;
-}
-.tailMainR{
-    padding: 10px 0;
-    float: left;
+    margin-top: 10px;
+    text-align: center;
 }
 .tailMainR b{
     color: #12b7de;
@@ -518,5 +519,5 @@ div .search{
     position: fixed;
     right: 20px;
     bottom: 10%;
-    background: #333333;
+    background: #000000;
 }
