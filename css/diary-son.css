@@ -77,149 +77,14 @@ div .search{
 .mainLeft{
     width: 902px;
     height: auto;
-    min-height: 300px;
     float: left;
 }
-.mainLeft .figure{
+.article{
     padding: 20px;
+    box-sizing: border-box;
     background: #ffffff;
     border-radius: 5px;
     overflow: hidden;
-}
-.figure img{
-    width: 132px;
-    height: 100px;
-    float: left;
-    margin-right: 20px;
-}
-.figure h2{
-    margin-bottom: 15px;
-}
-.latestBlog{
-    width: 862px;
-    padding: 20px;
-    margin-top: 20px;
-    background: #ffffff;
-    border-radius: 5px;
-}
-.latestBlog .blogTextAll{
-    width: 862px;
-    padding: 20px 0;
-    overflow: hidden;
-    border-bottom: 1px dashed #eeeeee;
-}
-.blogTextBranch{
-    width: 862px;
-    overflow: hidden;
-}
-.branchTitle{
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-.branchTitle .branchTitleL{
-    float: left;
-    color: #ff0000;
-    font-size: 18px;
-}
-.branchTitle .branchTitleR{
-    display: block;
-    float: left;
-    color: #333333;
-    font-size: 18px;
-}
-.branchTitleR:hover{
-    color: #00c1de;
-}
-.branchContent{
-    overflow: hidden;
-}
-.branchContentL{
-    width: 200px;
-    height: 105px;
-    display: block;
-    float: left;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-}
-.branchContentL > p{
-    background: #39bbda;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.branchContentL:hover img{
-    transform: scale(1.1,1.1);
-    transition: all .5s linear;
-}
-.branchContentR{
-    width: 642px;
-    margin-left: 20px;
-    float: right;
-}
-.blogarticles{
-    font-size: 14px;
-    line-height: 1.5;
-    display: -webkit-box;        /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/
-    -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索子元素的排列方式*/
-    -webkit-line-clamp: 2;      /*用来限制多行文本显示行数*/
-    overflow: hidden;
-    margin-bottom: 36px;
-}
-.trivial{
-    height: 36px;
-    overflow: hidden;
-}
-.aboutMe{
-    display: block;
-    width: 36px;
-    height: 36px;
-    float: left;
-}
-.aboutMe img{
-    border-radius: 50%;
-}
-.trivial .date{
-    margin-left: 10px;
-    line-height: 36px;
-    float: left;
-}
-.trivial .experience{
-    color:#99a5c2;
-    margin-left: 10px;
-    line-height: 36px;
-    float: left;
-}
-.experience a{
-    color: #009966;
-}
-.more{
-    display: block;
-    padding: 10px;
-    background: #12b7de;
-    float: right;
-    border-radius: 5px;
-}
-.more p{
-    color: #000;
-    line-height: 16px;
-}
-/*main右块*/
-.mainRight{
-    width: 284px;
-    height: auto;
-    border-radius: 5px;
-    float: right;
-}
-.mainRight a:hover img{
-    transition: all .5s linear;
-    transform: scale(1.1,1.1);
-}
-.mainRight .clickrank{
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background: #ffffff;
 }
 .retitle{
     height: 39px;
@@ -242,6 +107,223 @@ div .search{
 .retitle:hover::before{
     width: 75px;
     transition: width .5s linear;
+}
+.title{
+    overflow: hidden;
+    line-height: 40px;
+    border-bottom: 1px solid #e9eaed;
+}
+.title > h2{
+    float: left;
+    border-bottom: 0;
+}
+.title > p{
+    font-size: 14px;
+    color: #666666;
+    float: right;
+}
+.title > p > span > a{
+    color: #666666;
+}
+.contentTitle{
+    font-size: 22px;
+    color: #333333;
+    margin-top: 20px;
+}
+.trivial{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.trivial .aboutMe{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #4ebbfe;
+}
+.trivial > span{
+    margin: 0 5px;
+}
+.synopsis{
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background: #e9eaed;
+    line-height: 1.5;
+}
+.synopsis > b{
+    margin-right: 10px;
+}
+.synopsis > span{
+
+}
+.text{
+    margin-top: 20px;
+    line-height: 20px;
+}
+.textImg{
+    width: 720px;
+    height: 800px;
+    margin: 20px auto;
+}
+.tags{
+    margin: 15px 0;
+}
+.share{
+    margin: 15px 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #e9eaed;
+    line-height: 1.5;
+}
+.support{
+    width: 160px;
+    height: 40px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #E2523A;
+    border-radius: 5px;
+    text-align: center;
+}
+.info{
+    margin: 15px 0;
+}
+.info > a{
+    color: #000000;
+}
+.info > a:hover{
+    border-bottom: 1px solid #333333;
+}
+.aboutText{
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.aboutText > ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.aboutText > ul > li{
+    width: 400px;
+    margin: 5px 5px;
+    position: relative;
+}
+.aboutText > ul > li::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    margin-top: -1px;
+}
+.random{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.randomList{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.randomList > li{
+    width: 205px;
+}
+.randomList > li > a > img{
+    width: 205px;
+    height: 140px;
+}
+.randomList > li > a > h2{
+    color: #333333;
+    font-size: 16px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.randomList > li:hover > a > h2{
+    margin-bottom: 10px;
+    color: #000000;
+}
+.randomList > li > a > p{
+    color: #333333;
+    font-size: 14px;
+    margin-top: 10px;
+    display: -webkit-box;        /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-box-orient: vertical;/*必须结合的属性 ，设置或检索子元素的排列方式*/
+    -webkit-line-clamp: 3;      /*用来限制多行文本显示行数*/
+    overflow: hidden;
+}
+.articleComment{
+    margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.articleComment > ul > li{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9eaed;
+}
+.articleComment > ul > li > .commentImg{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.articleComment > ul > li > .commentImg > img{
+    border-radius: 50%;
+}
+.articleComment > ul > li > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fbtime span:nth-child(1){
+    display: block;
+    float: left;
+}
+.fbtime{
+    width: 100%;
+}
+.fbtime span:nth-child(2){
+    display: block;
+    float: right;
+}
+    /*main右块*/
+.mainRight{
+    width: 284px;
+    height: auto;
+    border-radius: 5px;
+    float: right;
+}
+.mainRight a:hover img{
+    transition: all .5s linear;
+    transform: scale(1.1,1.1);
+}
+.mainRight .clickrank{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #ffffff;
 }
 .clickrank .bequiet{
     display: block;
@@ -444,27 +526,6 @@ div .search{
 }
 .statInformationList{
     margin-top: 20px;
-}
-.statInformationList li{
-    margin-top: 10px;
-}
-.statInformationList li a{
-    color: #009966;
-}
-.statInformationList li a:hover{
-    color: #00c1de;
-}
-.mainRight .fLink{
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background: #ffffff;
-}
-.fLink a{
-    color: #333333;
-    display: block;
-    margin-top: 20px;
-    margin-left: 20px;
 }
 /*尾部*/
 .tail{

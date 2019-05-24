@@ -96,9 +96,14 @@ div .search{
     min-height: 300px;
 }
 .main form > input{
+    padding: 4px 16px;
     margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
     display: block;
     float: right;
+    color: #ffffff;
+    background: #333333;
 }
 .main .comment{
     width: 1140px;

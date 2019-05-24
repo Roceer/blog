@@ -69,17 +69,37 @@ div .search{
     width: 1200px;
     height: auto;
     margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
+    box-sizing: border-box;
     border-radius: 5px;
-    min-height: 800px;
     background: #ffffff;
+}
+.retitle{
+    height: 39px;
+    line-height: 39px;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #e9eaed;
+    position: relative;
+}
+.retitle:hover::before{
+    width: 75px;
+    transition: width .5s linear;
+}
+.retitle:before{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #333333;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 }
 .main > ul > li{
     height: 32px;
     line-height: 32px;
-    margin-top: 10px;
     overflow: hidden;
-
 }
 .main > ul > li > div{
     width: 100px;
@@ -108,27 +128,24 @@ div .search{
     display: block;
     float: left;
 }
-.retitle{
-    height: 39px;
-    line-height: 39px;
-    font-size: 16px;
-    color: #333333;
-    border-bottom: 1px solid #e9eaed;
-    position: relative;
+.main > .subscript{
+    margin: 20px 0 30px;
+    text-align: center;
 }
-.retitle:hover::before{
-    width: 75px;
-    transition: width .5s linear;
+.main > .subscript > span{
+    padding: 5px 10px;
+    margin: 0 10px;
+    background: #e9eaed;
 }
-.retitle:before{
-    content: '';
-    display: block;
-    width: 65px;
-    height: 2px;
-    background: #333333;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
+.main > .subscript > span:nth-child(1){
+    font-weight: bold;
+}
+.main > .subscript > span:nth-child(2){
+    font-weight: bold;
+}
+.main > .subscript > span:hover{
+    color: #ffffff;
+    background: #000000;
 }
 .tail{
     width: 100%;
