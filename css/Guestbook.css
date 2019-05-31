@@ -99,11 +99,13 @@ div .search{
     padding: 4px 16px;
     margin-top: 10px;
     box-sizing: border-box;
+    font-style: normal;
+    border: 0;
     border-radius: 5px;
     display: block;
     float: right;
     color: #ffffff;
-    background: #333333;
+    background: #000000;
 }
 .main .comment{
     width: 1140px;

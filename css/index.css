@@ -13,6 +13,7 @@ body{
 }
 a{
     color: #ffffff;
+    /*去a标签下划线*/
     text-decoration: none;
 }
 img{
@@ -88,9 +89,17 @@ div .search{
     left: 0;
     top: 0;
 }
+.bannerLeft:hover .leftBtn{
+    display: block;
+}
+.bannerLeft:hover .rightBtn{
+    display: block;
+}
 .leftBtn , .rightBtn{
+    display: none;
     width: 40px;
     height: 32px;
+    z-index: 9999;
     position: absolute;
     top: 50%;
     margin-top: -16px;
@@ -104,6 +113,7 @@ div .search{
 .btnCircle{
     width: 96px;
     height: 10px;
+    z-index: 9999;
     position: absolute;
     bottom: 25px;
     left: 50%;
@@ -116,6 +126,9 @@ div .search{
     border-radius: 50%;
     float: left;
     background: white;
+}
+.btnCircle > li.hot{
+    background: #00c1de;
 }
 /*中块*/
 .bannerMid{
@@ -208,8 +221,12 @@ div .search{
 .diaryLeft ul{
     border-bottom: 1px solid #e9eaed;
     overflow: hidden; /*清除浮动*/
+    box-sizing: border-box;
 }
-.diaryLeft  .diarytitleList a{
+.diaryLeft  .diarytitleList li{
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
     height: 39px;
     line-height: 39px;
     margin-right: 25px;
@@ -284,7 +301,9 @@ div .search{
 }
 .tabList > li{
     line-height: 20px;
-    padding: 0 20px 12px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
 }
 .tabList > li > p{
     font-size: 16px;
@@ -298,6 +317,7 @@ div .search{
 }
 .tabList > li.pointer{
     background: #e9eaed;
+    padding: 6px 20px;
 }
 .tabList li.pointer span{
     background: #333333;

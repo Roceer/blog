@@ -74,6 +74,7 @@ div .search{
     box-sizing: border-box;
     background: #ffffff;
     border-radius: 5px;
+    background-image: url("./image/");
 }
 .main .about{
     display: flex;
