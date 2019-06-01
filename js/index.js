@@ -242,14 +242,26 @@ window.onload = function(){
     }
 
     //图片阴影
-    let shadow = document.querySelectorAll(".imgShadow > a");
+    let shadow = document.querySelectorAll(".imgShadow > a > div");
     console.log(shadow);
     let shadows = document.querySelectorAll(".imgShadow > a > img");
     console.log(shadows);
-    shadow.forEach(function (ele) {
-        ele.onmouseenter = function(){
-            shadows.style.opacity = 1;
+    for (let i = 0; i < shadow.length; i++){
+        for (let j = 0; j <shadows.length; j++) {
+            if(i == j){
+                shadows[j].onmouseenter = function() {
+                    this.style.opacity = 1;
+                }
+                shadows[j].onmouseleave = function() {
+                    this.style.opacity = 0.7;
+                }
+                shadow[j].onmouseenter = function() {
+                    shadows[j].style.opacity = 1;
+                }
+                shadow[j].onmouseleave = function() {
+                    shadows[j].style.opacity = 0.7;
+                }
+            }
         }
-    })
-
+    }
 }
