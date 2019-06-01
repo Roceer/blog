@@ -80,23 +80,29 @@ div .search{
     margin-right: 12px;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 .bannerLeft .imgLink{
     border-radius: 5px;
     width: 620px;
     height: 260px;
     position: absolute;
-    left: 0;
+    left: 620px;
     top: 0;
 }
+.bannerLeft .imgLink:nth-child(1){
+    left: 0;
+}
 .bannerLeft:hover .leftBtn{
-    display: block;
+    opacity: 1;
+    transition: opacity ease-in 0.5s;
 }
 .bannerLeft:hover .rightBtn{
-    display: block;
+    opacity: 1;
+    transition: opacity ease-in 0.5s;
 }
 .leftBtn , .rightBtn{
-    display: none;
+    opacity: 0;
     width: 40px;
     height: 32px;
     z-index: 9999;
@@ -160,6 +166,16 @@ div .search{
     top: 50%;
     margin-top: -19px;
     text-align: center;
+}
+.imgShadow{
+    background: rgba(0,0,0,0.8);
+}
+.imgShadow > a > img{
+    opacity: 0.7;
+}
+.imgShadow > a:hover img{
+    opacity: 1;
+    transition: opacity ease-in ;
 }
 /*右侧明信片块*/
 .banner .IDCard{

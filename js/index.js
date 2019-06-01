@@ -25,7 +25,7 @@ window.onload = function(){
     //轮播图button列表
     let btnCircle = document.getElementsByClassName("btnCircle");
     let btnList = btnCircle[0].getElementsByTagName("li");
-    console.log(btnList);
+    //鼠标放置变色
     // for (let i = 0; i < btnList.length; i++) {
     //     btnList[i].onmouseenter = function(){
     //         btnList[i].style.background = "#00c1de";
@@ -37,10 +37,12 @@ window.onload = function(){
     //     }
     // }
     //轮播图左右按钮样式
+
     let bannerImg = document.querySelectorAll(".bannerLeft > .imgLink");
     // console.log(bannerImg);
     let leftBtn = document.querySelector(".leftBtn");
     let rightBtn = document.querySelector(".rightBtn");
+    /*
     let index1 = bannerImg.length;
     leftBtn.onclick = function(){
         index1--;
@@ -48,13 +50,13 @@ window.onload = function(){
             index1 = bannerImg.length -1;
         }
         bannerImg.forEach(function(elem){
-            elem.style.zIndex = 1;
+            elem.style.opacity = 0;
         })
         for (let j = 0; j < btnList.length; j++) {
             btnList[j].classList.remove("hot");
         }
         btnList[index1].classList.add("hot");
-        bannerImg[index1].style.zIndex = 999;
+        bannerImg[index1].style.opacity = 1;
     }
     let index2 = 0;
     rightBtn.onclick = function(){
@@ -63,14 +65,60 @@ window.onload = function(){
             index2 = 0;
         }
         bannerImg.forEach(function(elem){
-            elem.style.zIndex = 1;
+            elem.style.opacity = 0;
         })
-        bannerImg[index2].style.zIndex = 999;
+        bannerImg[index2].style.opacity = 1;
         Array.prototype.forEach.call(btnList,function(ele){
             ele.classList.remove("hot");
             // console.log(index2);
         });
-        btnList[index2].classList.add("hot");
+        let t = setTimeout(function(){
+            clearInterval(t);
+            btnList[index2].classList.add("hot");
+        },1000)
+
+    }
+    */
+
+    //animate方法轮播
+    let current = 0, next = 0, itgo = true;
+    let w = bannerImg[0].offsetWidth;
+    leftBtn.onclick = function(){
+        if (!itgo) {
+            return;
+        }
+        itgo = false;
+        next --;
+        if (next < 0){
+            next = bannerImg.length - 1;
+        }
+        bannerImg[next].style.left = -w + "px";
+        animate (bannerImg[current],{left: w},1000);
+        btnList[current].classList.remove("hot");
+        animate (bannerImg[next],{left: 0},1000,function(){
+            itgo = true;
+        });
+        btnList[next].classList.add("hot");
+        current = next;
+    }
+
+    rightBtn.onclick = function(){
+        if (!itgo) {
+            return;
+        }
+        itgo = false;
+        next ++;
+        if (next == bannerImg.length){
+            next = 0;
+         }
+        bannerImg[next].style.left = w + "px";
+        animate(bannerImg[current],{left: -w},1000);
+        btnList[current].classList.remove("hot");
+        animate(bannerImg[next],{left: 0},1000,function(){
+            itgo = true;
+        });
+        btnList[next].classList.add("hot");
+        current = next;
     }
 
     //轮播图播放及鼠标暂停样式
@@ -84,7 +132,7 @@ window.onload = function(){
     }
 
     //轮播图圆点按钮点击
-    for(let i = 0; i < btnList.length; i++){
+    /*for(let i = 0; i < btnList.length; i++){
         btnList[i].onclick = function(){
             index2 = i;
             Array.prototype.forEach.call(btnList,function(ele){
@@ -94,10 +142,34 @@ window.onload = function(){
             //     btnList[j].classList.remove("hot");
             // }
             btnList[i].classList.add("hot");
-            bannerImg.forEach(function(elem){
-                elem.style.zIndex = 1;
-            })
-            bannerImg[i].style.zIndex = 999;
+        }
+    }*/
+    for(let i = 0; i < btnList.length; i++){
+        btnList[i].onclick =function () {
+            if (!itgo) {
+                return;
+            }
+            itgo = false;
+            if (next == i) {
+                return;
+            }
+            next = i;
+            if (next < current) {
+                bannerImg[next].style.left = -w + "px";
+                animate(bannerImg[current],{left: w});
+                animate(bannerImg[next],{left: 0},1000,function(){
+                    itgo = true;
+                });
+            }else{
+                bannerImg[next].style.left = w + "px";
+                animate(bannerImg[current],{left: -w});
+                animate(bannerImg[next],{left: 0},1000,function(){
+                    itgo = true;
+                });
+            }
+            btnList[current].classList.remove("hot");
+            btnList[next].classList.add("hot");
+            current = next;
         }
     }
 
@@ -143,5 +215,41 @@ window.onload = function(){
     //     }
     // })
 
+    //按需加载
+    /*
+    * 页面滚动高度 + 窗口高度  >=  元素到文档顶部的高度
+    * scroll         inner          topArr:offsetTop
+    *
+    * */
+    let imgs = document.querySelectorAll(".lazyload");
+    let topArr = [];
+    imgs.forEach(function(Top){
+        let parent = Top.offsetParent
+        let top = Top.offsetTop + parent.offsetTop;
+        topArr.push(top);
+    })
+    let viewH = window.innerHeight;
+    onscroll = function(){
+        let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        for (let i = 0; i < topArr.length; i++){
+            if (scrollTop + viewH >= topArr[i] + 100) {
+                if(!imgs[i].src){
+                    console.log(imgs[i].getAttribute("csrc"));
+                    imgs[i].src = imgs[i].getAttribute("csrc");
+                }
+            }
+        }
+    }
+
+    //图片阴影
+    let shadow = document.querySelectorAll(".imgShadow > a");
+    console.log(shadow);
+    let shadows = document.querySelectorAll(".imgShadow > a > img");
+    console.log(shadows);
+    shadow.forEach(function (ele) {
+        ele.onmouseenter = function(){
+            shadows.style.opacity = 1;
+        }
+    })
 
 }
