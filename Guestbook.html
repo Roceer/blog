@@ -46,37 +46,37 @@
 <div class="main">
     <h2 class="retitle">留言区</h2>
     <div>来说点什么吧</div>
-    <div>
-        您的姓名：<input type="text" name="blogname"> *
-    </div>
-    <div>选择头像： *</div>
-    <div>
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-        <img src="./image/aboutMe.jpg" alt="">
-    </div>
-    <form>
-        留言内容：
-        <textarea cols="30" rows="10"></textarea>
-        <input type="submit" value="提交" >
+    <form id="myForm">
+        <div>
+            您的姓名：<input type="text" name="blogname">
+        </div>
+        <div>选择头像：</div>
+        <div class="avatar">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+            <img src="./image/aboutMe.jpg" alt="">
+        </div>
+        <div class="content">
+            留言内容：<span>限制输入100字，已输入&nbsp</span><span id="count"></span><span>&nbsp字</span>
+            <textarea></textarea>
+            <input type="submit" value="提交" >
+        </div>
     </form>
     <ul>
         <li class="comment">
             <div class="commentL"><img src="./image/aboutMe.jpg" alt=""></div>
             <div class="commentR">
-                <p>webname
-                    <span>2019-5-14</span>
-                </p>
-                <div>你就是个大**</div>
+                <p><span>预备</span><time>2019-5-14</time></p>
+                <div>I'm wrong</div>
             </div>
         </li>
         <li class="reply">
-            <p><span style="color: #ff0000;">站长回复：</span>购买，请加青青微信。476847113</p>
+            <p><span style="color: #ff0000;">站长回复：</span>welcome</p>
         </li>
     </ul>
 </div>
@@ -84,7 +84,7 @@
     <div class="tailMain">
         <div class="tailMainL">
             <p>
-                <img src="./image/QQ二维码.jpg" alt="" style="margin-right: 21px;">
+                <img src="./image/QQ二维码.jpg" alt="">
                 <span>我的QQ</span>
             </p>
             <p>
@@ -105,5 +105,6 @@
 <div class="retop">
     <a href=""><img src="./image/top.png" alt=""></a>
 </div>
+<script src="js/Guestbook.js"></script>
 </body>
 </html>

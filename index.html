@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1206082_nvlm373g55.css">
     <script src="js/animate.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/index.js"></script>
+    <script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
 </head>
 <body>
 <!--    内宽-->
@@ -23,6 +26,11 @@
             </li>
             <li>
                 <a href="./product.html">网站制作</a>
+                <ul class="slideDown">
+                    <li><a href="">Css3|HTML5</a></li>
+                    <li><a href="">建设</a></li>
+                    <li><a href="">推荐</a></li>
+                </ul>
             </li>
             <li>
                 <a href="./gain.html">设计心得</a>
@@ -188,7 +196,7 @@
             <ul class="recommendList">
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/recommendList1.png" alt="" class="lazyload">
+                        <img csrc="./image/recommendList1.png" alt="" class="lazy" data-original="./image/recommendList1.png">
                     </a>
                     <h2>【个人博客空间申请】金牛云服，免费领空间啦</h2>
                     <p>还在愁域名购买了，如何选择主机或者服务器吗？
@@ -197,7 +205,7 @@
                 </li>
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/recommendList2.png" alt="" class="lazyload">
+                        <img csrc="./image/recommendList2.png" alt="" class="lazy" data-original="./image/recommendList2.png">
                     </a>
                     <h2>双十一，阿里云特惠活动，快来领券啦</h2>
                     <p>一折的产品，有没有看错，咱来看看，到底是哪些一折，想买空间吗？算了吧，服务器的价钱都比空间便宜呢，那肯定买服务器啊，咱来看看阿里云一折的服务器哪些好</p>
@@ -205,7 +213,7 @@
                 </li>
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/recommendList3.png" alt="" class="lazyload">
+                        <img csrc="./image/recommendList3.png" alt="" class="lazy" data-original="./image/recommendList3.png">
                     </a>
                     <h2>第二届 优秀个人博客模板比赛参选活动</h2>
                     <p>只要你是在校大学生，不管你是新生，还是即将毕业，不管你是前端菜鸟，还是前端大神，只要你会html，这里将会是你展示才能的大平台。</p>
@@ -213,7 +221,7 @@
                 </li>
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/h1.jpg" alt="" class="lazyload">
+                        <img csrc="./image/h1.jpg" alt="" class="lazy" data-original="./image/h1.jpg">
                     </a>
                     <h2>为什么说10月24日是程序员的节日？</h2>
                     <p>“创立“程序员节”最早是来自俄文《计算机世界》（《Компьютерра》）出版社的主编德米特里·门德列留科（Дмитрий
@@ -222,7 +230,7 @@
                 </li>
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/h2.jpg" alt="" class="lazyload">
+                        <img csrc="./image/h2.jpg" alt="" class="lazy" data-original="./image/h2.jpg">
                     </a>
                     <h2>个人网站做好了，百度不收录怎么办？来，看看他们怎么做的。</h2>
                     <p>不管你是学前端的还是后端的，作为一个程序员，做一个自己的博客，那是必然的。咱们的圈子就这么大，想让更多的人了解你，看看你的技术多牛逼，扔一个博客地址就行了。 大多数人在没有</p>
@@ -230,7 +238,7 @@
                 </li>
                 <li>
                     <a href="" class="recommendListImg">
-                        <img csrc="./image/recommendList4.png" alt="" class="lazyload">
+                        <img csrc="./image/recommendList4.png" alt="" class="lazy" data-original="./image/recommendList4.png">
                     </a>
                     <h2>即便是坑，我也想要拉你入伙！</h2>
                     <p>
@@ -241,7 +249,7 @@
         </div>
         <div class="figure">
             <a href="">
-                <img csrc="./image/Leftspace.jpg" alt="" class="lazyload">
+                <img csrc="./image/Leftspace.jpg" alt="" class="lazy" data-original="./image/Leftspace.jpg">
             </a>
         </div>
         <div class="latestBlog">
@@ -254,7 +262,7 @@
                     </h2>
                     <div class="branchContent">
                         <a href="./gain.html" class="branchContentL">
-                            <img csrc="./image/branchContentL1.jpg" alt="" class="lazyload">
+                            <img csrc="./image/branchContentL1.jpg" alt="" class="lazy" data-original="./image/branchContentL1.jpg">
                             <p>设计心得</p>
                         </a>
                         <div class="branchContentR">
@@ -284,7 +292,7 @@
                     </h2>
                     <div class="branchContent">
                         <a href="./product.html" class="branchContentL">
-                            <img csrc="./image/branchContentL2.jpg" alt="" class="lazyload">
+                            <img csrc="./image/branchContentL2.jpg" alt="" class="lazy" data-original="./image/branchContentL2.jpg">
                             <p>CSS3|HTML5</p>
                         </a>
                         <div class="branchContentR">
@@ -314,7 +322,7 @@
                     </h2>
                     <div class="branchContent">
                         <a href="./diary-person.html" class="branchContentL">
-                            <img csrc="./image/branchContentL3.jpg" alt="" class="lazyload">
+                            <img csrc="./image/branchContentL3.jpg" alt="" class="lazy" data-original="./image/branchContentL3.jpg">
                             <p>个人博客日记</p>
                         </a>
                         <div class="branchContentR">
@@ -344,7 +352,7 @@
                     </h2>
                     <div class="branchContent">
                         <a href="./product.html" class="branchContentL">
-                            <img csrc="./image/branchContentL4.jpg" alt="" class="lazyload">
+                            <img csrc="./image/branchContentL4.jpg" alt="" class="lazy" data-original="./image/branchContentL4.jpg">
                             <p>网站制作</p>
                         </a>
                         <div class="branchContentR">
@@ -374,7 +382,7 @@
                     </h2>
                     <div class="branchContent">
                         <a href="./gain.html" class="branchContentL">
-                            <img csrc="./image/branchContentL5.jpg" alt="" class="lazyload">
+                            <img csrc="./image/branchContentL5.jpg" alt="" class="lazy" data-original="./image/branchContentL5.jpg">
                             <p>设计心得</p>
                         </a>
                         <div class="branchContentR">
@@ -402,7 +410,7 @@
         <div class="clickrank">
             <h2 class="retitle">点击排行</h2>
             <a href="./diary-person.html" class="bequiet">
-                <img csrc="./image/bequiet.jpg" alt="" title="神圣洗礼：信仰之翼" class="lazyload">
+                <img csrc="./image/bequiet.jpg" alt="" title="神圣洗礼：信仰之翼" class="lazy" data-original="./image/bequiet.jpg">
                 <center>哦哦哦\(^o^)/~哦哦哦</center>
             </a>
             <ul class="clickranktList">
@@ -439,7 +447,7 @@
         <div class="statRecommed">
             <h2 class="retitle">站长推荐</h2>
             <a href="./gain.html" class="principle">
-                <img csrc="./image/principle.jpg" alt="" title="救赎彼岸：惩戒圣枪" class="lazyload">
+                <img csrc="./image/principle.jpg" alt="" title="救赎彼岸：惩戒圣枪" class="lazy" data-original="./image/principle.jpg">
                 <center>作为一个设计师,如果遭到质疑你是否能恪守自己的原则?</center>
             </a>
             <ul class="statRecommedtList">
@@ -489,7 +497,7 @@
         </div>
         <div class="MRimg">
             <a href="https://tieba.baidu.com/f?kw=dnf%C4%EE%B5%DB&fr=ala0&tpl=5">
-                <img csrc="./image/MRimg1.jpg" alt="加载失败" title="念帝旋天破" class="lazyload">
+                <img csrc="./image/MRimg1.jpg" alt="加载失败" title="念帝旋天破" class="lazy" data-original="./image/MRimg1.jpg">
             </a>
         </div>
         <div class="gLike">
@@ -506,7 +514,7 @@
         </div>
         <div class="MRimg">
             <a href="https://tieba.baidu.com/f?kw=%BA%EC%B9%B7&fr=ala0&tpl=5">
-                <img csrc="./image/MRimg2.jpg" alt="加载失败" title="血魔：弑天" class="lazyload">
+                <img csrc="./image/MRimg2.jpg" alt="加载失败" title="血魔：弑天" class="lazy" data-original="./image/MRimg2.jpg">
             </a>
         </div>
         <div class="statInformation">
@@ -534,7 +542,7 @@
                     <p><b>微信公众号：</b>扫描二维码关注我</p>
                 </li>
             </ul>
-            <img csrc="./image/二维码.png" alt="" title="雷神：裁决降世" class="lazyload">
+            <img csrc="./image/二维码.png" alt="" title="雷神：裁决降世" class="lazy" data-original="./image/二维码.png">
         </div>
         <div class="fLink">
             <h2 class="retitle">友情链接</h2>
@@ -552,7 +560,7 @@
     <div class="tailMain">
         <div class="tailMainL">
             <p>
-                <img src="./image/QQ二维码.jpg" alt="" style="margin-right: 21px;">
+                <img src="./image/QQ二维码.jpg" alt="">
                 <span>我的QQ</span>
             </p>
             <p>

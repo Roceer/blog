@@ -31,30 +31,43 @@ img{
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    line-height: 60px;
+    /*line-height: 60px;*/
 }
 .headerBox h1{
-    height: 100%;
-    margin:0 75px 0 0;
+    margin-top: 12px;
+    margin-right: 75px;
     float: left;
 }
 /*网站导航列表*/
-ul.nav{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
 .nav{
-    height: 100%;
+    width: 880px;
     float: left;
 }
-.nav li{
+.nav > li{
     float: left;
+    margin-top: 22px;
     margin-right: 20px;
+    background: #333333;
+    position: relative;
 }
 /*a标签鼠标放置变色*/
 .nav a:hover{
     color: #00c1de;
+}
+.slideDown{
+    display: none;
+    position: absolute;
+    top: 20px;
+    background: #333333;
+    z-index: 111;
+}
+.slideDown li{
+    margin-top: 15px;
+    padding: 5px 10px;
+ }
+.slideDown li a{
+    font-size: 16px;
+    color: #ffffff;
 }
 div .search{
     height: 100%;

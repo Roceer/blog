@@ -74,30 +74,42 @@ div .search{
     min-height: 800px;
     background: #ffffff;
 }
-.main div{
+.main > div{
     width: 1160px;
     margin-top: 10px;
     overflow: hidden;
 }
-.main div > img{
+.main > form > .avatar{
+    overflow: hidden;
+}
+.main > form > .avatar > img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: block;
     float: left;
     margin-right: 10px;
+    opacity: 0.7;
 }
-.main form{
+.main > form > .avatar > .avatarHot{
+    opacity: 1;
+}
+.main .content{
     overflow: hidden;
     margin-bottom: 20px;
 }
-.main form > textarea{
+.main .content span {
+    margin: 10px 0;
+    display: inline-block;
+}
+.main .content > textarea{
     width: 1150px;
     min-height: 300px;
+    resize:none;
 }
-.main form > input{
+.main .content > input{
     padding: 4px 16px;
-    margin-top: 10px;
+    margin: 10px 0 0 10px;
     box-sizing: border-box;
     font-style: normal;
     border: 0;
@@ -113,25 +125,28 @@ div .search{
     overflow: hidden;
     border-bottom: 1px solid #e9eaed;
 }
-.main .comment .commentL{
+.comment > .commentL{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     float: left;
     margin-right: 10px;
+}
+.comment > .commentL > img{
+    border-radius: 50%;
 }
 .main .comment .commentR{
     width: 1080px;
     float: left;
     overflow: hidden;
 }
-.main .comment .commentR p span{
+.main .comment .commentR time{
     color: #e9eaed;
     display: block;
     float: right;
 }
-.main .comment .commentR div{
+.main .comment .commentR > p{
     width: 1080px;
+    margin-bottom: 18px;
 }
 .main .reply{
     width: 1160px;
